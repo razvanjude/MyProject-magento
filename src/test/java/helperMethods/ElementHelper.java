@@ -1,9 +1,6 @@
 package helperMethods;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -41,6 +38,19 @@ public class ElementHelper {
 
     public void fillLocator(By locator, String value) {
         waitForVisible(locator);
+        driver.findElement(locator).sendKeys(value);
+    }
+
+    public void fillPressLocator(By locator, String value, Keys key) {
+        waitForVisible(locator);
+        driver.findElement(locator).sendKeys(value);
+        driver.findElement(locator).sendKeys(key);
+    }
+
+
+    public void clearAndFillLocator(By locator, String value) {
+        waitForVisible(locator);
+        driver.findElement(locator).clear();
         driver.findElement(locator).sendKeys(value);
     }
 

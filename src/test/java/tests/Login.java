@@ -7,8 +7,8 @@ import sharedData.SharedData;
 
 public class Login extends SharedData {
 
-    @Test
-    public void metodaTest() {
+    @Test(priority = 0)
+    public void metodaLogin() {
 
     ElementHelper elementHelper = new ElementHelper(getDriver());
 
@@ -29,6 +29,25 @@ public class Login extends SharedData {
         By thankYouElement = By.xpath("(//span[@class='base'])[1]");
         String expectedMessage = "Home Page";
         elementHelper.validateElementText(thankYouElement,expectedMessage);
+
+//        By userOption = By.xpath("(//button[@type='button'])[1]");
+//        elementHelper.clickLocator(userOption);
+//
+//        By signOutButton = By.xpath("(//a[normalize-space()='Sign Out'])[1]");
+//        elementHelper.clickLocator(signOutButton);
+
+    }
+
+    @Test(priority = 1)
+    public void metodalogout() {
+
+        ElementHelper elementHelper = new ElementHelper(getDriver());
+
+        By userOption = By.xpath("(//button[@type='button'])[1]");
+        elementHelper.clickLocator(userOption);
+
+        By signOutButton = By.xpath("(//a[normalize-space()='Sign Out'])[1]");
+        elementHelper.clickLocator(signOutButton);
 
     }
 

@@ -1,5 +1,6 @@
 package tests;
 
+import Pages.LoginPage;
 import helperMethods.ElementHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -30,19 +31,11 @@ public class MyAccount extends SharedData {
         ElementHelper elementHelper = new ElementHelper(getDriver());
 
         //Face Login
-        By signInElement = By.xpath("//a[contains(text(),'Sign In')]");
-        elementHelper.clickLocator(signInElement);
-
-        By emailElement = By.xpath("//input[@id='email']");
-        String emailValue = "gigi.Constatin4@example.com";
-        elementHelper.fillLocator(emailElement,emailValue);
-
-        By passwordElement = By.xpath("(//input[@id='pass'])[1]");
-        String passwordValue = "Pa$$w0rd.";
-        elementHelper.fillLocator(passwordElement,passwordValue);
-
-        By signInButton = By.xpath("//button[@class='action login primary']");
-        elementHelper.clickJsLocator(signInButton);
+        LoginPage loginPage = new LoginPage(getDriver());
+        loginPage.goToSignInPage();
+        loginPage.fillEmailAddress();
+        loginPage.fillPassword();
+        loginPage.signInButton();
 
 
         //Deschide My Account

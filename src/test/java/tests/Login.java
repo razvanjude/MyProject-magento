@@ -3,8 +3,6 @@ package tests;
 import Pages.AssertionPage;
 import Pages.LoginPage;
 import Pages.LogoutPage;
-import helperMethods.ElementHelper;
-import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 import sharedData.SharedData;
 

@@ -20,8 +20,4 @@ public class AssertionPage {
         elementHelper.validateElementText(AssertionLocators.thankYouElement,expectedMessage);
     }
 
-    public void checkThankYouMessage() {
-        String expectedMessage = "Home Page";
-        elementHelper.validateElementText(AssertionLocators.thankYouElement,expectedMessage);
-    }
 }

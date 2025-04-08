@@ -2,6 +2,7 @@ package tests;
 
 import Pages.AssertionPage;
 import Pages.LoginPage;
+import Pages.LogoutPage;
 import helperMethods.ElementHelper;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
@@ -17,19 +18,8 @@ public class Login extends SharedData {
 
         AssertionPage assertionPage = new AssertionPage(getDriver());
         assertionPage.checkThankYouMessage();
+
+        LogoutPage logoutPage = new LogoutPage(getDriver());
+        logoutPage.logoutFromApp();
     }
-
-    @Test(priority = 1)
-    public void metodalogout() {
-
-        ElementHelper elementHelper = new ElementHelper(getDriver());
-
-        By userOption = By.xpath("(//button[@type='button'])[1]");
-        elementHelper.clickLocator(userOption);
-
-        By signOutButton = By.xpath("(//a[normalize-space()='Sign Out'])[1]");
-        elementHelper.clickLocator(signOutButton);
-
-    }
-
 }

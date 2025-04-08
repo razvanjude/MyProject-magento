@@ -35,6 +35,7 @@ public class LoginPage {
         signInButton();
     }
 
+
     public void signInButton() {
 
         elementHelper.clickLocator(LoginLocators.signInButton);

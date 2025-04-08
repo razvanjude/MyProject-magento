@@ -4,7 +4,6 @@ import helperMethods.ElementHelper;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import pageLocators.AccountLocators;
-import pageLocators.AssertionLocators;
 
 public class AccountPage {
 

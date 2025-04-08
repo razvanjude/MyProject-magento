@@ -4,6 +4,8 @@ import helperMethods.ElementHelper;
 import org.openqa.selenium.WebDriver;
 import pageLocators.RegisterLocators;
 
+import java.util.UUID;
+
 public class RegisterPage {
 
     private WebDriver driver;
@@ -28,9 +30,14 @@ public class RegisterPage {
         elementHelper.fillLocator(RegisterLocators.lastNameElement, lastNameValue);
     }
 
+//    public void addUserEmail() {
+//        String emailValue = "gigi.Constatin9@example.com";
+//        elementHelper.fillLocator(RegisterLocators.emailElement, emailValue);
+//    }
+
     public void addUserEmail() {
-        String emailValue = "gigi.Constatin9@example.com";
-        elementHelper.fillLocator(RegisterLocators.emailElement, emailValue);
+        String randomEmail = "user_" + UUID.randomUUID().toString().substring(0, 8) + "@example.com";
+        elementHelper.fillLocator(RegisterLocators.emailElement, randomEmail);
     }
 
     public void addPassword() {

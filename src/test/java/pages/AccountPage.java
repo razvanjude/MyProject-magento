@@ -1,4 +1,4 @@
-package Pages;
+package pages;
 
 import helperMethods.ElementHelper;
 import org.openqa.selenium.Keys;
@@ -36,47 +36,40 @@ public class AccountPage {
         elementHelper.clickLocator(AccountLocators.addNewAddressButton);
     }
 
-    public void insertFirstName() {
-        String firstNameValue = "Razvanos";
+    public void insertFirstName(String firstNameValue) {
         elementHelper.clearAndFillLocator(AccountLocators.firstNameElement, firstNameValue);
     }
 
-    public void insertLastName() {
-        String lastNameValue = "Judos";
-        elementHelper.clearAndFillLocator(AccountLocators.lastNameElement, lastNameValue);
+    public void insertLastName(String lastNameValue) {
+               elementHelper.clearAndFillLocator(AccountLocators.lastNameElement, lastNameValue);
     }
 
-    public void insertPhoneNumber() {
-        String phoneNumberValue = "0740123321";
-        elementHelper.clearAndFillLocator(AccountLocators.phoneNumberElement, phoneNumberValue);
+    public void insertPhoneNumber(String phoneNumberValue) {
+                elementHelper.clearAndFillLocator(AccountLocators.phoneNumberElement, phoneNumberValue);
     }
 
-    public void insertStreetAddress() {
-        String streetAddressValue = "str. Ion Mester";
-        elementHelper.clearAndFillLocator(AccountLocators.streetAddressElement, streetAddressValue);
+    public void insertStreetAddress(String streetAddressValue) {
+                elementHelper.clearAndFillLocator(AccountLocators.streetAddressElement, streetAddressValue);
     }
 
-    public void insertCity() {
-        String cityValue = "CLuj";
-        elementHelper.clearAndFillLocator(AccountLocators.cityElement, cityValue);
+    public void insertCity(String cityValue) {
+                elementHelper.clearAndFillLocator(AccountLocators.cityElement, cityValue);
     }
 
-    public void insertState() {
-        String stateValue = "Guam";
-        elementHelper.fillPressLocator(AccountLocators.stateElement,stateValue, Keys.ENTER);
+    public void insertState(String stateValue) {
+               elementHelper.fillPressLocator(AccountLocators.stateElement,stateValue, Keys.ENTER);
     }
 
-    public void insertZipCode() {
-        String postalCodeValue = "200400";
-        elementHelper.clearAndFillLocator(AccountLocators.postalCodeElement, postalCodeValue);
+    public void insertZipCode(String postalCodeValue) {
+               elementHelper.clearAndFillLocator(AccountLocators.postalCodeElement, postalCodeValue);
     }
 
     public void saveAddress() {
         elementHelper.clickLocator(AccountLocators.saveAddressButton);
     }
 
-    public void validateElementText() {
-        String expectMessage = "You saved the address.";
+    public void validateElementText(String expectMessage) {
+        //String expectMessage = "You saved the address.";
         elementHelper.validateElementText(AccountLocators.saveAddressConfirmationElement,expectMessage);
     }
 

@@ -15,4 +15,9 @@ public class AccesoriesLocators {
     public static final By removeItemFromCart = By.xpath("//a[@title='Remove item']");
     public static final By confirmOKRemoveFromCart = By.cssSelector("button[class='action-primary action-accept'] span");
     public static final By noItemsInCartMsg = By.xpath("//strong[@class='subtitle empty']");
+    public static final By proceedToCheckoutBtn = By.xpath("//button[@id='top-cart-btn-checkout']");
+    public static final By nextShippingBtn = By.xpath("//span[normalize-space()='Next']");
+    public static final By selectFixedShippingmethod = By.xpath("//tbody/tr[2]/td[1]");
+    public static final By placeOrderBtn = By.xpath("//span[normalize-space()='Place Order']");
+    public static final By purchaseConfirmationMsg = By.xpath("//span[@class='base']");
 }

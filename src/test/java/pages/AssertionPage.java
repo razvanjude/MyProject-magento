@@ -1,4 +1,4 @@
-package Pages;
+package pages;
 
 import helperMethods.ElementHelper;
 import org.openqa.selenium.WebDriver;

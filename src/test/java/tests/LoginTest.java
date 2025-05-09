@@ -1,12 +1,12 @@
 package tests;
 
-import Pages.AssertionPage;
-import Pages.LoginPage;
-import Pages.LogoutPage;
+import pages.AssertionPage;
+import pages.LoginPage;
+import pages.LogoutPage;
 import org.testng.annotations.Test;
 import sharedData.SharedData;
 
-public class Login extends SharedData {
+public class LoginTest extends SharedData {
 
     @Test(priority = 0)
     public void metodaLogin() {

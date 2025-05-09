@@ -1,4 +1,4 @@
-package Pages;
+package pages;
 
 import helperMethods.ElementHelper;
 import org.openqa.selenium.WebDriver;
@@ -37,7 +37,6 @@ public class LoginPage {
 
 
     public void signInButton() {
-
         elementHelper.clickLocator(LoginLocators.signInButton);
     }
 }

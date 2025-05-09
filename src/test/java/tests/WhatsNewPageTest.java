@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 import sharedData.SharedData;
 
-public class WhatsNewPage extends SharedData {
+public class WhatsNewPageTest extends SharedData {
 
     @Test
     public void metodaTest() {

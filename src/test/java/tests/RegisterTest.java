@@ -1,10 +1,10 @@
 package tests;
 
-import Pages.RegisterPage;
+import pages.RegisterPage;
 import org.testng.annotations.Test;
 import sharedData.SharedData;
 
-public class Register extends SharedData {
+public class RegisterTest extends SharedData {
 
     @Test
     public void metodaTest() {

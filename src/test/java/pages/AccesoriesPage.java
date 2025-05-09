@@ -1,10 +1,8 @@
-package Pages;
+package pages;
 
 import helperMethods.ElementHelper;
 import org.openqa.selenium.WebDriver;
 import pageLocators.AccesoriesLocators;
-import pageLocators.AccountLocators;
-import pageLocators.LoginLocators;
 
 public class AccesoriesPage {
 
@@ -21,6 +19,7 @@ public class AccesoriesPage {
     }
 
     public void goToJacketsView() {
+
         elementHelper.clickJsLocator(AccesoriesLocators.jacketsView);
     }
 
@@ -36,7 +35,7 @@ public class AccesoriesPage {
         elementHelper.clickLocator(AccesoriesLocators.blackColor);
    }
 
-   public void addToCart(){
+   public void addToCart() {
         elementHelper.clickLocator(AccesoriesLocators.addToCart);
    }
 
@@ -62,14 +61,44 @@ public class AccesoriesPage {
         elementHelper.clickJsLocator(AccesoriesLocators.confirmOKRemoveFromCart);
    }
 
-   public void noItemsInCartMsg() {
+   public void noItemsInCartMsg(String expectMessage) {
        try {
            Thread.sleep(2000); // wait for 2 seconds
        } catch (InterruptedException e) {
            e.printStackTrace();
        }
-       String expectMessage = "You have no items in your shopping cart.";
-       elementHelper.validateElementText(AccesoriesLocators.confirmOKRemoveFromCart,expectMessage);
+       //String expectMessage = "You have no items in your shopping cart.";
+       elementHelper.validateElementText(AccesoriesLocators.noItemsInCartMsg,expectMessage);
    }
+
+   public void goToCheckout() {
+        elementHelper.clickJsLocator(AccesoriesLocators.proceedToCheckoutBtn);
+   }
+
+   public void selectShippingMethod() {
+        elementHelper.clickJsLocator(AccesoriesLocators.selectFixedShippingmethod);
+   }
+
+   public void goToPaymentsPage() {
+        elementHelper.clickJsLocator(AccesoriesLocators.nextShippingBtn);
+   }
+
+   public void placeOrder() {
+       try {
+           Thread.sleep(2000); // wait for 2 seconds
+       } catch (InterruptedException e) {
+           e.printStackTrace();
+       }
+        elementHelper.clickJsLocator(AccesoriesLocators.placeOrderBtn);
+   }
+
+    public void confirmationPurchase(String expectMessage) {
+        try {
+            Thread.sleep(2000); // wait for 2 seconds
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        elementHelper.validateElementText(AccesoriesLocators.purchaseConfirmationMsg,expectMessage);
+    }
 
 }

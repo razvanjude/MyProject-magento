@@ -1,11 +1,11 @@
 package tests;
 
-import Pages.AccountPage;
-import Pages.LoginPage;
+import pages.AccountPage;
+import pages.LoginPage;
 import org.testng.annotations.Test;
 import sharedData.SharedData;
 
-public class MyAccount extends SharedData {
+public class MyAccountTest extends SharedData {
 
     @Test
     public void AddInfoToAddressBook() {
@@ -23,15 +23,15 @@ public class MyAccount extends SharedData {
         //Deschide AddressBook
         accountPage.goToAddressBook();
         accountPage.addNewAddress();
-        accountPage.insertFirstName();
-        accountPage.insertLastName();
-        accountPage.insertPhoneNumber();
-        accountPage.insertStreetAddress();
-        accountPage.insertCity();
-        accountPage.insertState();
-        accountPage.insertZipCode();
+        accountPage.insertFirstName("Razvanel");
+        accountPage.insertLastName("Judos");
+        accountPage.insertPhoneNumber("0740123456");
+        accountPage.insertStreetAddress("str. Sf. Aurel");
+        accountPage.insertCity("Cluj");
+        accountPage.insertState("Guam");
+        accountPage.insertZipCode("200650");
         accountPage.saveAddress();
-        accountPage.validateElementText();
+        accountPage.validateElementText("You saved the address.");
     }
 }
 

@@ -1,11 +1,11 @@
 package tests;
 
-import Pages.AccesoriesPage;
-import Pages.LoginPage;
+import pages.AccesoriesPage;
+import pages.LoginPage;
 import org.testng.annotations.Test;
 import sharedData.SharedData;
 
-public class AddMenJacketsToBasket extends SharedData {
+public class AddMenJacketsToBasketTest extends SharedData {
 
     @Test
     public void AddMenJacketsToBasket(){
@@ -23,6 +23,6 @@ public class AddMenJacketsToBasket extends SharedData {
         accesoriesPage.goToCart();
         accesoriesPage.removeItemFromCart();
         accesoriesPage.confirmOKRemoveFromCart();
-        //accesoriesPage.noItemsInCartMsg();
+        accesoriesPage.noItemsInCartMsg("You have no items in your shopping cart.");
     }
 }

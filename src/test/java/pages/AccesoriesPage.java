@@ -39,6 +39,10 @@ public class AccesoriesPage {
         elementHelper.clickLocator(AccesoriesLocators.addToCart);
    }
 
+   public void addToWishList() {
+        elementHelper.clickJsLocator(AccesoriesLocators.addToWishlistBtn);
+   }
+
    public void goToCart() {
        try {
            Thread.sleep(2000); // wait for 2 seconds
@@ -67,8 +71,11 @@ public class AccesoriesPage {
        } catch (InterruptedException e) {
            e.printStackTrace();
        }
-       //String expectMessage = "You have no items in your shopping cart.";
        elementHelper.validateElementText(AccesoriesLocators.noItemsInCartMsg,expectMessage);
+   }
+
+   public void addWishlistMsg(String expectMessage) {
+        elementHelper.validateElementText(AccesoriesLocators.addWishlistMsg, expectMessage);
    }
 
    public void goToCheckout() {

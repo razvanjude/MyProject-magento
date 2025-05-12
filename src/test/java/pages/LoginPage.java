@@ -18,20 +18,18 @@ public class LoginPage {
         elementHelper.clickLocator(LoginLocators.signInElement);
     }
 
-    public void fillEmailAddress() {
-        String emailValue = "gigi.Constatin4@example.com";
+    public void fillEmailAddress(String emailValue) {
         elementHelper.fillLocator(LoginLocators.emailElement,emailValue);
     }
 
-    public void fillPassword() {
-        String passwordValue = "Pa$$w0rd.";
+    public void fillPassword(String passwordValue) {
         elementHelper.fillLocator(LoginLocators.passwordElement,passwordValue);
     }
 
     public void loginToApp() {
         goToSignInPage();
-        fillEmailAddress();
-        fillPassword();
+        fillEmailAddress("gigi.Constatin4@example.com");
+        fillPassword("Pa$$w0rd.");
         signInButton();
     }
 

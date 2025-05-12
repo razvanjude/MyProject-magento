@@ -15,7 +15,7 @@ public class LoginTest extends SharedData {
         loginPage.loginToApp();
 
         AssertionPage assertionPage = new AssertionPage(getDriver());
-        assertionPage.checkThankYouMessage();
+        assertionPage.checkThankYouMessage("Home Page");
 
         LogoutPage logoutPage = new LogoutPage(getDriver());
         logoutPage.logoutFromApp();

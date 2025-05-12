@@ -15,8 +15,7 @@ public class AssertionPage {
         elementHelper = new ElementHelper(driver);
     }
 
-    public void checkThankYouMessage() {
-        String expectedMessage = "Home Page";
+    public void checkThankYouMessage(String expectedMessage) {
         elementHelper.validateElementText(AssertionLocators.thankYouElement,expectedMessage);
     }
 

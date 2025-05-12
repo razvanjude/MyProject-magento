@@ -26,9 +26,10 @@ public class MyAccountTest extends SharedData {
         accountPage.insertFirstName("Razvanel");
         accountPage.insertLastName("Judos");
         accountPage.insertPhoneNumber("0740123456");
+        accountPage.chooseCountry("Romania");
         accountPage.insertStreetAddress("str. Sf. Aurel");
-        accountPage.insertCity("Cluj");
-        accountPage.insertState("Guam");
+        accountPage.insertCity("Cluj Napoca");
+        accountPage.insertState("Cluj");
         accountPage.insertZipCode("200650");
         accountPage.saveAddress();
         accountPage.validateElementText("You saved the address.");

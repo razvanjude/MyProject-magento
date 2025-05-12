@@ -15,6 +15,7 @@ public class AccountLocators {
     public static final By streetAddressElement = By.xpath("//input[@id='street_1']");
     public static final By cityElement = By.xpath("//input[@name='city']");
     public static final By stateElement = By.xpath("//select[@id='region_id']");
+    public static final By country = By.xpath("//select[@id='country']");
     public static final By postalCodeElement = By.xpath("//input[@id='zip']");
     public static final By saveAddressButton = By.xpath("//button[@title='Save Address']");
     public static final By saveAddressConfirmationElement = By.xpath("//div[contains(text(),'You saved the address.')]");

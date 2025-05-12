@@ -60,6 +60,10 @@ public class AccountPage {
                elementHelper.fillPressLocator(AccountLocators.stateElement,stateValue, Keys.ENTER);
     }
 
+    public void chooseCountry(String countryValue) {
+        elementHelper.fillPressLocator(AccountLocators.country, countryValue, Keys.ENTER);
+    }
+
     public void insertZipCode(String postalCodeValue) {
                elementHelper.clearAndFillLocator(AccountLocators.postalCodeElement, postalCodeValue);
     }

@@ -22,10 +22,10 @@ public class SharedData {
 
     }
 
-//    @AfterMethod
-//    public void clearEnvironemnt() {
-//        driver.quit();
-//    }
+    @AfterMethod
+    public void clearEnvironemnt() {
+        driver.quit();
+    }
 
     public WebDriver getDriver() {
         return driver;

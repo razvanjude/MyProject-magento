@@ -4,6 +4,8 @@ import pages.RegisterPage;
 import org.testng.annotations.Test;
 import sharedData.SharedData;
 
+import java.util.UUID;
+
 public class RegisterTest extends SharedData {
 
     @Test
@@ -11,13 +13,17 @@ public class RegisterTest extends SharedData {
 
         RegisterPage registerPage = new RegisterPage(getDriver());
 
+        // Date generate dinamic
+        String randomFirstName = "User_" + UUID.randomUUID().toString().substring(0, 5);
+        String randomLastName = "Test_" + UUID.randomUUID().toString().substring(0, 5);
+
         registerPage.goToCreateAccount();
-        registerPage.addFirstName();
-        registerPage.addLastName();
+        registerPage.addFirstName(randomFirstName);
+        registerPage.addLastName(randomLastName);
         registerPage.addUserEmail();
-        registerPage.addPassword();
-        registerPage.addConfirmationPassword();
+        registerPage.addPassword("Pa$$w0rd.");
+        registerPage.addConfirmationPassword("Pa$$w0rd.");
         registerPage.createAccount();
-        registerPage.thankYouMessage();
+        registerPage.thankYouMessage("Thank you for registering with Main Website Store.");
     }
 }

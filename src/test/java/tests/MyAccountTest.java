@@ -5,6 +5,9 @@ import pages.LoginPage;
 import org.testng.annotations.Test;
 import sharedData.SharedData;
 
+import java.util.Random;
+import java.util.UUID;
+
 public class MyAccountTest extends SharedData {
 
     @Test
@@ -20,14 +23,21 @@ public class MyAccountTest extends SharedData {
         accountPage.goToMyAccount();
         accountPage.landOnMyAccountPage();
 
+        // Generate random data
+        String randomFirstName = "User_" + UUID.randomUUID().toString().substring(0, 5);
+        String randomLastName = "Test_" + UUID.randomUUID().toString().substring(0, 5);
+        String randomPhone = "07" + (new Random().nextInt(90000000) + 10000000);
+        String randomStreet = "Strada Test " + new Random().nextInt(100);
+
+
         //Deschide AddressBook
         accountPage.goToAddressBook();
         accountPage.addNewAddress();
-        accountPage.insertFirstName("Razvanel");
-        accountPage.insertLastName("Judos");
-        accountPage.insertPhoneNumber("0740123456");
+        accountPage.insertFirstName(randomFirstName);
+        accountPage.insertLastName(randomLastName);
+        accountPage.insertPhoneNumber(randomPhone);
         accountPage.chooseCountry("Romania");
-        accountPage.insertStreetAddress("str. Sf. Aurel");
+        accountPage.insertStreetAddress(randomStreet);
         accountPage.insertCity("Cluj Napoca");
         accountPage.insertState("Cluj");
         accountPage.insertZipCode("200650");

@@ -22,4 +22,6 @@ public class AccesoriesLocators {
     public static final By placeOrderBtn = By.xpath("//span[normalize-space()='Place Order']");
     public static final By purchaseConfirmationMsg = By.xpath("//span[@class='base']");
     public static final By addToWishlistBtn = By.xpath("//div[@class='product-addto-links']//span[contains(text(),'Add to Wish List')]");
+    public static final By continueShoppingBtn = By.xpath("//span[normalize-space()='Continue Shopping']");
+
 }

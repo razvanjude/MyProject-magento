@@ -61,4 +61,5 @@ public class ElementHelper {
         String actualMessage = driver.findElement(locator).getText();
         Assert.assertEquals(actualMessage,expectedMessage);
     }
+
 }

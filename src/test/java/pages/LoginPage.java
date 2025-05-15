@@ -3,6 +3,7 @@ package pages;
 import helperMethods.ElementHelper;
 import org.openqa.selenium.WebDriver;
 import pageLocators.LoginLocators;
+import pageLocators.RegisterLocators;
 
 public class LoginPage {
 
@@ -37,4 +38,9 @@ public class LoginPage {
     public void signInButton() {
         elementHelper.clickLocator(LoginLocators.signInButton);
     }
+
+    public void homePageText(String expectedMessage) {
+        elementHelper.validateElementText(LoginLocators.homePageText,expectedMessage);
+    }
 }
+

@@ -100,12 +100,11 @@ public class AccesoriesPage {
    }
 
     public void confirmationPurchase(String expectMessage) {
-        try {
-            Thread.sleep(2000); // wait for 2 seconds
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         elementHelper.validateElementText(AccesoriesLocators.purchaseConfirmationMsg,expectMessage);
+    }
+
+    public void continueShopping() {
+        elementHelper.clickJsLocator(AccesoriesLocators.continueShoppingBtn);
     }
 
 }

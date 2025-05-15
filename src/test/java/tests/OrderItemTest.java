@@ -7,12 +7,10 @@ import pages.AccesoriesPage;
 import pages.LoginPage;
 import sharedData.SharedData;
 
-public class ProceedToCheckoutTest extends SharedData {
-
-    private static final Logger log = LoggerFactory.getLogger(ProceedToCheckoutTest.class);
+public class OrderItemTest extends SharedData {
 
     @Test
-    public void AddMenJacketsToBasket(){
+    public void OrderItems(){
 
         LoginPage loginPage = new LoginPage(getDriver());
         loginPage.loginToApp();

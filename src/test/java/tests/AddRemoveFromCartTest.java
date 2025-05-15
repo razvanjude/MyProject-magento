@@ -5,10 +5,10 @@ import pages.LoginPage;
 import org.testng.annotations.Test;
 import sharedData.SharedData;
 
-public class AddMenJacketsToBasketTest extends SharedData {
+public class AddRemoveFromCartTest extends SharedData {
 
     @Test
-    public void AddMenJacketsToBasket(){
+    public void AddRemoveItemsFromCart(){
 
         LoginPage loginPage = new LoginPage(getDriver());
         loginPage.loginToApp();

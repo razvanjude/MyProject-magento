@@ -29,7 +29,7 @@ public class LoginPage {
 
     public void loginToApp() {
         goToSignInPage();
-        fillEmailAddress("gigi.Constatin4@example.com");
+        fillEmailAddress("razvan.jude@example.com");
         fillPassword("Pa$$w0rd.");
         signInButton();
     }

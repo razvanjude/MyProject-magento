@@ -23,8 +23,7 @@ public class AccountPage {
         elementHelper.clickLocator(AccountLocators.userOption);
     }
 
-    public void landOnMyAccountPage() {
-        String expectedMessage = "My Account";
+    public void landOnMyAccountPage(String expectedMessage) {
         elementHelper.validateElementText(AccountLocators.myAccountElement,expectedMessage);
     }
 

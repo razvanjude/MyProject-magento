@@ -21,7 +21,7 @@ public class MyAccountTest extends SharedData {
         AccountPage accountPage = new AccountPage(getDriver());
         accountPage.goToUserOption();
         accountPage.goToMyAccount();
-        accountPage.landOnMyAccountPage();
+        accountPage.landOnMyAccountPage("My Account");
 
         // Generate random data
         String randomFirstName = "User_" + UUID.randomUUID().toString().substring(0, 5);

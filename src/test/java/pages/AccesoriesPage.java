@@ -2,7 +2,11 @@ package pages;
 
 import helperMethods.ElementHelper;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pageLocators.AccesoriesLocators;
+
+import java.time.Duration;
 
 public class AccesoriesPage {
 
@@ -24,19 +28,19 @@ public class AccesoriesPage {
     }
 
    public void selectProteusJacket() {
-        elementHelper.clickLocator(AccesoriesLocators.proteusJacket);
+        elementHelper.clickJsLocator(AccesoriesLocators.proteusJacket);
    }
 
    public void selectXS() {
-       elementHelper.clickLocator(AccesoriesLocators.xsMeasure);
+       elementHelper.clickJsLocator(AccesoriesLocators.xsMeasure);
    }
 
    public void blackColor() {
-        elementHelper.clickLocator(AccesoriesLocators.blackColor);
+        elementHelper.clickJsLocator(AccesoriesLocators.blackColor);
    }
 
    public void addToCart() {
-        elementHelper.clickLocator(AccesoriesLocators.addToCart);
+        elementHelper.clickJsLocator(AccesoriesLocators.addToCart);
    }
 
    public void addToWishList() {
@@ -45,7 +49,7 @@ public class AccesoriesPage {
 
    public void goToCart() {
        try {
-           Thread.sleep(2000); // wait for 2 seconds
+           Thread.sleep(3000); // wait for 2 seconds
        } catch (InterruptedException e) {
            e.printStackTrace();
        }
@@ -79,14 +83,23 @@ public class AccesoriesPage {
    }
 
    public void goToCheckout() {
-        elementHelper.clickJsLocator(AccesoriesLocators.proceedToCheckoutBtn);
+       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+       wait.until(ExpectedConditions.visibilityOfElementLocated(AccesoriesLocators.proceedToCheckoutBtn));
+
+       elementHelper.clickJsLocator(AccesoriesLocators.proceedToCheckoutBtn);
    }
 
    public void selectShippingMethod() {
+       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+       wait.until(ExpectedConditions.visibilityOfElementLocated(AccesoriesLocators.selectFixedShippingmethod));
+
         elementHelper.clickJsLocator(AccesoriesLocators.selectFixedShippingmethod);
    }
 
    public void goToPaymentsPage() {
+       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+       wait.until(ExpectedConditions.visibilityOfElementLocated(AccesoriesLocators.nextShippingBtn));
+
         elementHelper.clickJsLocator(AccesoriesLocators.nextShippingBtn);
    }
 

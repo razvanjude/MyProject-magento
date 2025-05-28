@@ -1,5 +1,6 @@
 package sharedData;
 
+import loggerUtility.LoggerUtility;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -11,13 +12,17 @@ import java.time.Duration;
 public class SharedData {
 
     private WebDriver driver;
+    private String testName;
 
     @BeforeMethod
     public void prepareEnvironment() {
 
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless=new"); //setam ca testele noastre sa se ruleze headles(adica fara sa deschida browser) in github actions
-        driver = new ChromeDriver(options);
+        testName = this.getClass().getSimpleName();
+        LoggerUtility.startTest(testName);
+
+//        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("--headless=new"); //setam ca testele noastre sa se ruleze headles(adica fara sa deschida browser) in github actions
+//        driver = new ChromeDriver(options);
 
         driver = new ChromeDriver();
         driver.get("https://magento.softwaretestingboard.com/");
@@ -29,6 +34,7 @@ public class SharedData {
     @AfterMethod
     public void clearEnvironemnt() {
         driver.quit();
+        LoggerUtility.finishTest(testName);
     }
 
     public WebDriver getDriver() {

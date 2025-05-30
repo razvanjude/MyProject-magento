@@ -1,6 +1,7 @@
 package pages;
 
 import helperMethods.ElementHelper;
+import loggerUtility.LoggerUtility;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -20,31 +21,37 @@ public class AccesoriesPage {
 
     public void goToMenView() {
         elementHelper.clickJsLocator(AccesoriesLocators.menView);
+        LoggerUtility.infoLog("Access MEN view");
     }
 
     public void goToJacketsView() {
-
         elementHelper.clickJsLocator(AccesoriesLocators.jacketsView);
+        LoggerUtility.infoLog("Access Jacket view");
     }
 
    public void selectProteusJacket() {
         elementHelper.clickJsLocator(AccesoriesLocators.proteusJacket);
+       LoggerUtility.infoLog("Select Proteus Jacket");
    }
 
    public void selectXS() {
        elementHelper.clickJsLocator(AccesoriesLocators.xsMeasure);
+       LoggerUtility.infoLog("Select XS measure");
    }
 
    public void blackColor() {
         elementHelper.clickJsLocator(AccesoriesLocators.blackColor);
+       LoggerUtility.infoLog("Select color black");
    }
 
    public void addToCart() {
         elementHelper.clickJsLocator(AccesoriesLocators.addToCart);
+       LoggerUtility.infoLog("Click Add to cart button");
    }
 
    public void addToWishList() {
         elementHelper.clickJsLocator(AccesoriesLocators.addToWishlistBtn);
+       LoggerUtility.infoLog("Click add to Wishlist");
    }
 
    public void goToCart() {
@@ -54,6 +61,7 @@ public class AccesoriesPage {
            e.printStackTrace();
        }
         elementHelper.clickJsLocator(AccesoriesLocators.goToCart);
+       LoggerUtility.infoLog("Click Go to cart button");
    }
 
    public void removeItemFromCart() {
@@ -61,6 +69,7 @@ public class AccesoriesPage {
        wait.until(ExpectedConditions.visibilityOfElementLocated(AccesoriesLocators.removeItemFromCart));
 
         elementHelper.clickJsLocator(AccesoriesLocators.removeItemFromCart);
+       LoggerUtility.infoLog("Click Remove item from cart");
    }
 
    public void confirmOKRemoveFromCart() {
@@ -70,6 +79,7 @@ public class AccesoriesPage {
            e.printStackTrace();
        }
         elementHelper.clickJsLocator(AccesoriesLocators.confirmOKRemoveFromCart);
+       LoggerUtility.infoLog("Click confirmation OK button when removing from cart");
    }
 
    public void noItemsInCartMsg(String expectMessage) {
@@ -90,6 +100,7 @@ public class AccesoriesPage {
        wait.until(ExpectedConditions.visibilityOfElementLocated(AccesoriesLocators.proceedToCheckoutBtn));
 
        elementHelper.clickJsLocator(AccesoriesLocators.proceedToCheckoutBtn);
+       LoggerUtility.infoLog("Proceed to Checkout page");
    }
 
    public void selectShippingMethod() {
@@ -97,6 +108,7 @@ public class AccesoriesPage {
        wait.until(ExpectedConditions.visibilityOfElementLocated(AccesoriesLocators.selectFixedShippingmethod));
 
         elementHelper.clickJsLocator(AccesoriesLocators.selectFixedShippingmethod);
+       LoggerUtility.infoLog("Select Shipping method");
    }
 
    public void goToPaymentsPage() {
@@ -104,6 +116,7 @@ public class AccesoriesPage {
        wait.until(ExpectedConditions.visibilityOfElementLocated(AccesoriesLocators.nextShippingBtn));
 
         elementHelper.clickJsLocator(AccesoriesLocators.nextShippingBtn);
+       LoggerUtility.infoLog("Proceed to Payments page");
    }
 
    public void placeOrder() {
@@ -113,6 +126,7 @@ public class AccesoriesPage {
            e.printStackTrace();
        }
         elementHelper.clickJsLocator(AccesoriesLocators.placeOrderBtn);
+       LoggerUtility.infoLog("Click Place order button");
    }
 
     public void confirmationPurchase(String expectMessage) {
@@ -121,6 +135,7 @@ public class AccesoriesPage {
 
     public void continueShopping() {
         elementHelper.clickJsLocator(AccesoriesLocators.continueShoppingBtn);
+        LoggerUtility.infoLog("Click Continue shopping button");
     }
 
 }

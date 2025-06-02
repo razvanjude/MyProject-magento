@@ -18,17 +18,16 @@ public class SharedData {
     public void prepareEnvironment() {
 
         testName = this.getClass().getSimpleName();
-        LoggerUtility.startTest(testName);
 
-//        ChromeOptions options = new ChromeOptions();
-//        options.addArguments("--headless=new"); //setam ca testele noastre sa se ruleze headles(adica fara sa deschida browser) in github actions
-//        driver = new ChromeDriver(options);
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless=new"); //setam ca testele noastre sa se ruleze headles(adica fara sa deschida browser) in github actions
+        driver = new ChromeDriver(options);
 
-        driver = new ChromeDriver();
+        //driver = new ChromeDriver();
         driver.get("https://magento.softwaretestingboard.com/");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
+        LoggerUtility.startTest(testName);
     }
 
     @AfterMethod

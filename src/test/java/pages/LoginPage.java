@@ -3,7 +3,6 @@ package pages;
 import helperMethods.ElementHelper;
 import loggerUtility.LoggerUtility;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.bidi.log.Log;
 import pageLocators.LoginLocators;
 
 public class LoginPage {
